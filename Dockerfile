@@ -135,7 +135,7 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
 	# forward request and error logs to docker log collector
 	&& ln -sf /dev/stdout /var/log/nginx/access.log \
 	&& ln -sf /dev/stderr /var/log/nginx/error.log \
-        && mkdir -p  /var/cache/nginx/client_temp /var/cache/nginx/proxy_temp  /var/cache/nginx/fastcgi_temp  /var/cache/nginxp\
+        && mkdir -p  /var/cache/nginx/client_temp /var/cache/nginx/proxy_temp  /var/cache/nginx/fastcgi_temp  /var/cache/nginx\
         && chown nginx /var/cache/nginx/client_temp /var/cache/nginx/proxy_temp /var/cache/nginx/fastcgi_temp /var/cache/nginx
 
 COPY nginx.conf /etc/nginx/nginx.conf

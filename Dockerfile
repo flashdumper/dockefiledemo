@@ -137,7 +137,7 @@ RUN GPG_KEYS=B0F4253373F8F6F510D42178520A9993A1C052F8 \
 	&& ln -sf /dev/stderr /var/log/nginx/error.log \
         && mkdir -p  /var/cache/nginx/client_temp /var/cache/nginx/proxy_temp  /var/cache/nginx/fastcgi_temp  /var/cache/nginx /var/cache/nginx/uwsgi_temp /var/cache/nginx/scgi_temp /var/run\
         && chown nginx  -R /var/cache/nginx/client_temp /var/cache/nginx/proxy_temp /var/cache/nginx/fastcgi_temp /var/cache/nginx /var/cache/nginx/uwsgi_temp /var/cache/nginx/scgi_temp /var/run \
-        && touch var/run/nginx.pid && chown nginx var/run/nginx.pid
+        && touch /var/run/nginx.pid && chown nginx /var/run/nginx.pid
 
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY nginx.vh.default.conf /etc/nginx/conf.d/default.conf
